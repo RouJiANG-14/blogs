@@ -73,7 +73,8 @@ void name2() {
 ```
 `Flux.concat`方法接收的是比变长参数就不展示了，可以看下该方法的源码
 
-![Flux.concat](../images/Screen Shot 2020-05-02 at 17.59.10.png)
+![ ](https://github.com/1483523635/blogs/blob/master/java/images/Screen%20Shot%202020-05-02%20at%2017.59.10.png)
+
 该方法接受的是publisher类型的参数，所以Mono的source也可以接上来
 #### 代码
 ```java
