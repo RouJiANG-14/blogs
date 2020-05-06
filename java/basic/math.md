@@ -8,7 +8,7 @@
 
 ### 为什么Java要强转，JS却不用？
 写JS的时候前端分页，一直用的lodash的[_.ceil()](https://lodash.com/docs/4.17.15#ceil)，也不记得有强转呀。 后来用代码跑了一遍
-```
+```js
 typeof Math.ceil(11) =>"number"
 ```
 恍然大悟： 
@@ -23,7 +23,7 @@ typeof Math.ceil(11) =>"number"
 接受的是个`double`类型的参数，如果返回`int`就会出问题，因为两者表示的数据范围不一致。
 
 来个测试
-```
+```java
 @Test
 void test5() {
     final double maxDouble = Double.MAX_VALUE;
@@ -43,7 +43,7 @@ void test5() {
 
 ### 另外一个有意思的现象
 看测试
-```
+```java
 @Test
 void test6() {
     final double doubleResult = Math.ceil(100L/11);
@@ -55,7 +55,7 @@ void test6() {
 一步一步剖析一下
 ![](../images/math.ceil.test.failed.reason.png)
 提取个变量就找到问题了，常见的问题，一不小心就会出问题。。。
-```
+```java
 @Test
 void test6() {
     final double result = 100L / 11D;
