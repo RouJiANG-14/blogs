@@ -189,3 +189,6 @@ Command CodeSign failed with a nonzero exit code
 ## 引用
 * [Mac Os DarkMode](https://stackoverflow.com/questions/51672124/how-can-dark-mode-be-detected-on-macos-10-14)
 * [iOS - Code Sign Error in macOS High Sierra Xcode - resource fork, Finder information, or similar detritus not allowed - Stack Overflow](https://stackoverflow.com/questions/39652867/code-sign-error-in-macos-high-sierra-xcode-resource-fork-finder-information)
+
+## 源码
+https://github.com/1483523635/simple-MacOS-app
