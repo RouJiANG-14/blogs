@@ -37,6 +37,8 @@
 ## dotnet
 ### core
 - [web-api](./dotnet/core/web-api.md)
+## github
+- [auto-generate](./github/auto-generate.md)
 ## gitlab
 - [ci-init](./gitlab/ci-init.md)
 ## gitlab
