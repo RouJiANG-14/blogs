@@ -1,70 +1,39 @@
-# blogs
-For manage personal blog 
-# lists
-```
-├── C#
-│   └── enum.md
-├── README.md
-├── _config.yml
-├── docker
-│   ├── command-back.md
-│   └── mysql.md
-├── dotnet
-│   └── core
-│       ├── cross-domain-request.md
-│       ├── custom-exception-page.md
-│       ├── di-in-console.md
-│       ├── docker.md
-│       ├── eshop-on-container.md
-│       ├── nlog.md
-│       ├── public-not-found-view.md
-│       ├── send-email.md
-│       ├── wcf.md
-│       └── web-api.md
-├── gitlab
-│   ├── ci-init.md
-│   └── ci-java.md
-├── java
-│   ├── arch-unit
-│   │   └── arch-unit-custom-validate-rule.md
-│   ├── basic
-│   │   ├── future.md
-│   │   └── math.md
-│   ├── reactive-streaming
-│   │   ├── flux.md
-│   │   └── zip.md
-│   ├── spring
-│   │   ├── first-step.md
-│   │   ├── jpa
-│   │   │   └── enum.md
-│   │   └── spring-boot-split-yml.md
-│   └── test
-│       ├── Junit-exception-test.md
-│       └── junit-csv-source.md
-├── javaScript
-│   ├── jquery
-│   │   └── ajax.md
-│   ├── lodash
-│   │   └── muteable-operator.md
-│   ├── ng2-file-upload
-│   │   └── use-log.md
-│   └── rxjs
-│       └── observer.md
-├── network
-│   └── Intranet.md
-├── nginx
-│   └── first-step.md
-├── nuget
-│   └── publish-package.md
-├── objective-c
-│   └── syntax-basic.md
-├── python
-│   └── virtual-env.md
-└── tweak
-    └── MacOs
-        └── tools.md
-```
-
-
-## generate cmd
-`tree -I images`
+# Blogs
+- [enum](./C#/enum.md)
+- [StoryBoard](./MacOSApp/StoryBoard.md)
+- [command-back](./docker/command-back.md)
+- [mysql](./docker/mysql.md)
+- [cross-domain-request](./dotnet/core/cross-domain-request.md)
+- [custom-exception-page](./dotnet/core/custom-exception-page.md)
+- [di-in-console](./dotnet/core/di-in-console.md)
+- [docker](./dotnet/core/docker.md)
+- [eshop-on-container](./dotnet/core/eshop-on-container.md)
+- [nlog](./dotnet/core/nlog.md)
+- [public-not-found-view](./dotnet/core/public-not-found-view.md)
+- [send-email](./dotnet/core/send-email.md)
+- [wcf](./dotnet/core/wcf.md)
+- [web-api](./dotnet/core/web-api.md)
+- [ci-init](./gitlab/ci-init.md)
+- [ci-java](./gitlab/ci-java.md)
+- [arch-unit-custom-validate-rule](./java/arch-unit/arch-unit-custom-validate-rule.md)
+- [future](./java/basic/future.md)
+- [math](./java/basic/math.md)
+- [flux](./java/reactive-streaming/flux.md)
+- [zip](./java/reactive-streaming/zip.md)
+- [first-step](./java/spring/first-step.md)
+- [enum](./java/spring/jpa/enum.md)
+- [spring-boot-split-yml](./java/spring/spring-boot-split-yml.md)
+- [Junit-exception-test](./java/test/Junit-exception-test.md)
+- [junit-csv-source](./java/test/junit-csv-source.md)
+- [ajax](./javaScript/jquery/ajax.md)
+- [muteable-operator](./javaScript/lodash/muteable-operator.md)
+- [use-log](./javaScript/ng2-file-upload/use-log.md)
+- [observer](./javaScript/rxjs/observer.md)
+- [Intranet](./network/Intranet.md)
+- [first-step](./nginx/first-step.md)
+- [publish-package](./nuget/publish-package.md)
+- [syntax-basic](./objective-c/syntax-basic.md)
+- [virtual-env](./python/virtual-env.md)
+- [interface-inspector](./tweak/MacOs/interface-inspector.md)
+- [lldb-debug-command](./tweak/MacOs/lldb-debug-command.md)
+- [tools](./tweak/MacOs/tools.md)
