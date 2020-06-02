@@ -1,6 +1,6 @@
 # Blogs List
-## C#
-- [enum](./C#/enum.md)
+## CSharp
+- [enum](./CSharp/enum.md)
 ## MacOSApp
 - [StoryBoard](./MacOSApp/StoryBoard.md)
 ## docker
