@@ -61,7 +61,15 @@ else的地方直接改成赋值为1
 
 破解成功
 
+
 ## 总结
 参考了AloneMonkey的文章，但是到修改签名的那部分就有点跟不上了，改二进制，找terminate符号，之后自己按照自己的思路搞一波，发现比他的还要简单一点。
+
+## 错误解决
+![](https://img2020.cnblogs.com/blog/914251/202005/914251-20200526204343342-852980992.png)
+attach process过程中出现‘error:can not comminute with a helper application’
+解决方法：
+clone：https://github.com/rentzsch/mach_inject
+之后用Xcode build mach_inject_bundle 项目将 生成好的framework 替换`/Library/Frameworks`下的mach_inject_bundle.framework文件即可
 ## 参考
 [一篇文章走进Mac逆向的世界 | AloneMonkey](http://www.alonemonkey.com/2017/05/31/get-start-with-mac-reverse/)
