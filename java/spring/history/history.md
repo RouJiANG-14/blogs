@@ -2,7 +2,7 @@
 本文主要去介绍spring 的历史和每个版本发布的不同的功能。
 
 # 0.9 
-Spring的第一次出现在2020年的“Expert One-on-One J2EE Design and Developmen”上。
+Spring的第一次出现在2002年的“Expert One-on-One J2EE Design and Developmen”上。
 
 这次带来的有
 
