@@ -28,6 +28,7 @@
 - [arch-unit-custom-validate-rule](./java/arch-unit/arch-unit-custom-validate-rule.md)
 ### basic
 - [future](./java/basic/future.md)
+- [history](./java/basic/history.md)
 - [math](./java/basic/math.md)
 ### reactive-streaming
 - [flux](./java/reactive-streaming/flux.md)
