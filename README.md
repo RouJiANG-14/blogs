@@ -30,6 +30,7 @@
 - [arch-unit-custom-validate-rule](./java/arch-unit/arch-unit-custom-validate-rule.md)
 ### basic
 - [AbstractCollection](./java/basic/AbstractCollection.md)
+- [functionalProjram](./java/basic/functionalProjram.md)
 - [future](./java/basic/future.md)
 - [history](./java/basic/history.md)
 - [math](./java/basic/math.md)
