@@ -5,6 +5,9 @@
 - [StoryBoard](./MacOSApp/StoryBoard.md)
 ## agile
 - [IKM](./agile/IKM.md)
+## db
+### mysql
+- [datagrip-bug](./db/mysql/datagrip-bug.md)
 ## docker
 - [command-back](./docker/command-back.md)
 - [mysql](./docker/mysql.md)
