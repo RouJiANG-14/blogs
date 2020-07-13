@@ -9,6 +9,7 @@
 - [datagrip-bug](./db/datagrip-bug.md)
 ### mysql
 - [alter-table](./db/mysql/alter-table.md)
+- [row-format](./db/mysql/row-format.md)
 ## docker
 - [command-back](./docker/command-back.md)
 - [mysql](./docker/mysql.md)
