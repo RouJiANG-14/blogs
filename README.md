@@ -6,8 +6,9 @@
 ## agile
 - [IKM](./agile/IKM.md)
 ## db
+- [datagrip-bug](./db/datagrip-bug.md)
 ### mysql
-- [datagrip-bug](./db/mysql/datagrip-bug.md)
+- [alter-table](./db/mysql/alter-table.md)
 ## docker
 - [command-back](./docker/command-back.md)
 - [mysql](./docker/mysql.md)
