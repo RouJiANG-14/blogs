@@ -5,6 +5,7 @@
 - [StoryBoard](./MacOSApp/StoryBoard.md)
 ## agile
 - [IKM](./agile/IKM.md)
+- [自组织团队](./agile/自组织团队.md)
 ## db
 - [datagrip-bug](./db/datagrip-bug.md)
 ### mysql
@@ -12,6 +13,7 @@
 - [row-format](./db/mysql/row-format.md)
 ## docker
 - [command-back](./docker/command-back.md)
+- [k8s](./docker/k8s.md)
 - [mysql](./docker/mysql.md)
 ## dotnet
 ### core
