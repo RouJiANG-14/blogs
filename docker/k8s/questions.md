@@ -132,3 +132,22 @@ k8s1   Ready    <none>   14h   v1.18.6
 k8s2   Ready    master   15h   v1.18.6
 ```
 
+答案： 
+ 暂时没记录 。
+
+---
+
+### 问题 如何查看K8s集群的版本号
+
+答案：我是用kube admin 构建的k8s集群，用minikube构建的可能会不一样
+
+> kubeadm version
+
+```bash
+root@k8s2:~/k8s# kubeadm version
+kubeadm version: &version.Info{Major:"1", Minor:"18", GitVersion:"v1.18.6", GitCommit:"dff82dc0de47299ab66c83c626e08b245ab19037", GitTreeState:"clean", BuildDate:"2020-07-15T16:56:34Z", GoVersion:"go1.13.9", Compiler:"gc", Platform:"linux/amd64"}
+```
+
+这里是1.18.6
+
+
