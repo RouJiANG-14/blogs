@@ -16,7 +16,9 @@
 - [row-format](./db/mysql/row-format.md)
 ## docker
 - [command-back](./docker/command-back.md)
-- [k8s](./docker/k8s.md)
+### k8s
+- [basic](./docker/k8s/basic.md)
+- [questions](./docker/k8s/questions.md)
 - [mysql](./docker/mysql.md)
 ## dotnet
 ### core
