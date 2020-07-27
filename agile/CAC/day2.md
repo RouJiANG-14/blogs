@@ -18,6 +18,9 @@
     + [方式三](#%E6%96%B9%E5%BC%8F%E4%B8%89)
     + [方式四](#%E6%96%B9%E5%BC%8F%E5%9B%9B)
 
+
+## 小记
+
 * 用户往往不知道自己想要什么
 * 用的说的 ！= 用户实际做的 ！=用户心里想的
 * 产品化思维不是项目化思维
@@ -39,7 +42,7 @@
 
 ![](./images/day-2-requirement-onion.png)
 
-## MVP(Minimum Viable Product 最⼩小可⾏行行产品)
+## MVP(Minimum Viable Product 最小可⾏产品)
 
 ### 定义
 
