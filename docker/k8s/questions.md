@@ -151,3 +151,35 @@ kubeadm version: &version.Info{Major:"1", Minor:"18", GitVersion:"v1.18.6", GitC
 这里是1.18.6
 
 
+### 如何删除加入集群中的节点
+
+下线节点
+
+```bash
+root@k8s2:~# kubectl drain k8s1 --ignore-daemonsets --delete-local-data
+node/k8s1 already cordoned
+WARNING: ignoring DaemonSet-managed Pods: kube-system/kube-proxy-bw8mn
+node/k8s1 drained
+```
+
+确认下线
+
+```bash 
+root@k8s2:~# kubectl get nodes
+NAME   STATUS                        ROLES    AGE   VERSION
+k8s1   NotReady,SchedulingDisabled   <none>   23h   v1.18.6
+k8s2   Ready                         master   23h   v1.18.6
+```
+
+删除节点
+
+```bash
+root@k8s2:~# kubectl delete node k8s1
+node "k8s1" deleted
+root@k8s2:~# kubectl get nodes
+NAME   STATUS   ROLES    AGE   VERSION
+k8s2   Ready    master   23h   v1.18.6
+root@k8s2:~#
+```
+
+删除成功
