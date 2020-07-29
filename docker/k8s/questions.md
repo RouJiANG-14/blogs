@@ -167,7 +167,7 @@ node/k8s1 drained
 ```bash 
 root@k8s2:~# kubectl get nodes
 NAME   STATUS                        ROLES    AGE   VERSION
-k8s1   NotReady,SchedulingDisabled   <none>   23h   v1.18.6
+k8s1   Ready,SchedulingDisabled   <none>   23h   v1.18.6
 k8s2   Ready                         master   23h   v1.18.6
 ```
 
@@ -183,3 +183,252 @@ root@k8s2:~#
 ```
 
 删除成功
+
+### kubeadm init 如何指定pod的网络段
+
+> sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+
+参考： https://docs.projectcalico.org/getting-started/kubernetes/quickstart
+
+### 如何配置K8s集群的calico网络
+
+前提
+
+> 基于kubeadm init 指定的pod网络段。
+
+kubeadm init 之后的coreDNS状态
+
+```s
+root@k8s2:~/k8s# kubectl get pods --all-namespaces
+NAMESPACE     NAME                           READY   STATUS    RESTARTS   AGE
+kube-system   coredns-66bff467f8-l4lq5       0/1     Pending   0          65s
+kube-system   coredns-66bff467f8-mqpxc       0/1     Pending   0          65s
+kube-system   etcd-k8s2                      1/1     Running   0          75s
+kube-system   kube-apiserver-k8s2            1/1     Running   0          75s
+kube-system   kube-controller-manager-k8s2   1/1     Running   0          75s
+kube-system   kube-proxy-5twv5               1/1     Running   0          65s
+kube-system   kube-scheduler-k8s2            1/1     Running   0          75s
+```
+
+下载calico网络配置文件
+
+> wget -P ~/k8s/ https://docs.projectcalico.org/v3.8/manifests/calico.yaml
+
+编辑`calico.yaml` 修改默认网络段和你在kubeadm init指定的一致
+
+```s
+vim calico.yaml /192.168 可快速定位
+> - name: CALICO_IPV4POOL_CIDR
+>   value: "10.10.0.0/16"
+```
+
+安装插件
+
+> kubectl apply -f calico.yaml
+
+查看状态
+
+启动比较慢需要等大约1-2min
+
+> watch kubectl get pods --all-namespaces 
+
+```s
+root@k8s2:~/k8s# kubectl get pods --all-namespaces
+NAMESPACE     NAME                                      READY   STATUS    RESTARTS   AGE
+kube-system   calico-kube-controllers-75d555c48-x87bq   1/1     Running   0          12m
+kube-system   calico-node-g2rhd                         1/1     Running   0          12m
+kube-system   coredns-66bff467f8-l4lq5                  1/1     Running   0          13m
+kube-system   coredns-66bff467f8-mqpxc                  1/1     Running   0          13m
+kube-system   etcd-k8s2                                 1/1     Running   0          13m
+kube-system   kube-apiserver-k8s2                       1/1     Running   0          13m
+kube-system   kube-controller-manager-k8s2              1/1     Running   0          13m
+kube-system   kube-proxy-5twv5                          1/1     Running   0          13m
+kube-system   kube-scheduler-k8s2                       1/1     Running   0          13m
+```
+
+安装成功。
+
+参考：
+
+https://www.jianshu.com/p/3de558d8b57a
+
+## k8s 的服务如何让外网去访问
+
+背景：
+> 我在把ubuntu 装在了两个不同的虚拟机里，网络都是桥接的。这两个组成了k8s的集群，想让集群里部署的服务被我的真实的物理机访问到。
+
+解决方式有四种：
+
+1. hostNetwork: true 直接暴露 pod在部署pod的节点上，然后通过节点的ip加端口去访问。
+   yaml 
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-kube
+spec:
+  hostNetwork: true
+  containers:
+  - name: hello-kube
+    image: paulbouwer/hello-kubernetes:1.8
+    ports:
+    - containerPort: 8080
+    env:
+    - name: MESSAGE
+      value: "hello-kube"
+```
+
+![](./images/hostOnly.png)
+
+2. hostPort 直接定义Pod网络的方式,通过宿主机和pod之间的端口映射，类似直接起docker 然后做端口映射。
+
+yaml
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-kube
+spec:
+  containers:
+  - name: hello-kube
+    image: paulbouwer/hello-kubernetes:1.8
+    ports:
+    - containerPort: 8080
+      hostPort: 8081
+    env:
+    - name: MESSAGE
+      value: "hello-kube-host-port"
+```
+
+![](./images/hostPort.png)
+
+3. nodePort 定义网络方式
+
+NodePort在kubenretes里是一个广泛应用的服务暴露方式。
+Kubernetes中的service默认情况下都是使用的ClusterIP这种类型，这样的service会产生一个ClusterIP，这个IP只能在集群内部访问，要想让外部能够直接访问service，需要将service type修改为 nodePort。
+
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-kube
+  labels:
+    name: hello-kube
+spec:
+  containers:
+  - name: hello-kube
+    image: paulbouwer/hello-kubernetes:1.8
+    ports:
+    - containerPort: 8080
+    env:
+    - name: MESSAGE
+      value: "hello-kube-node-port"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-kube
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 30001 # 只能在区间 30000-32767
+  selector:
+    name: hello-kube
+```
+
+
+4. LoadBalancer  只能在service上定义 
+
+yaml
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-kube
+  labels:
+    name: hello-kube
+spec:
+  containers:
+  - name: hello-kube
+    image: paulbouwer/hello-kubernetes:1.8
+    ports:
+    - containerPort: 8080
+    env:
+    - name: MESSAGE
+      value: "hello-kube-load-balancer"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-kube
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    name: hello-kube
+```
+
+5. ingress
+
+创建service 和pod 的yaml
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-kube
+  labels:
+    name: hello-kube
+spec:
+  containers:
+  - name: hello-kube
+    image: paulbouwer/hello-kubernetes:1.8
+    ports:
+    - containerPort: 8080
+    env:
+    - name: MESSAGE
+      value: "hello-kube-load-balancer"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-kube
+spec:
+  ports:
+  - port: 8080
+  selector:
+    name: hello-kube
+```
+
+service 状态
+
+```
+NAME               TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+hello-kube         ClusterIP      10.111.142.96    <none>        8080/TCP         4s
+```
+
+
+## 集群重启之后无法使用kubelet
+
+> The connection to the server 192.168.2.121:6443 was refused - did you specify the right host or port?
+
+```s
+1. sudo -i
+
+2. swapoff -a
+
+3. exit
+
+4. strace -eopenat kubectl version
+```
+
+手动关掉 swapoff 在master 节点
+
+## nodePort 不生效
+
+> 设置service type为 nodePort， 理论上能在集群中任意ip均可访问，但是只能在部署pod的节点访问
+
+暂时没找到能在kubeadm 上建立的集群的解决方案。
