@@ -147,7 +147,7 @@ metadata:
 ```
 
 ### configMap
-```
+```yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
