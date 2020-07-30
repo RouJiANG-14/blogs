@@ -145,3 +145,8 @@ kind: Namespace
 metadata:
   name: xiaoqu
 ```
+
+### configMap
+```
+
+```

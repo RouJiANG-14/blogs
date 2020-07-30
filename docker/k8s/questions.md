@@ -198,7 +198,7 @@ root@k8s2:~#
 
 kubeadm init 之后的coreDNS状态
 
-```s
+```bash
 root@k8s2:~/k8s# kubectl get pods --all-namespaces
 NAMESPACE     NAME                           READY   STATUS    RESTARTS   AGE
 kube-system   coredns-66bff467f8-l4lq5       0/1     Pending   0          65s
@@ -216,7 +216,7 @@ kube-system   kube-scheduler-k8s2            1/1     Running   0          75s
 
 编辑`calico.yaml` 修改默认网络段和你在kubeadm init指定的一致
 
-```s
+```bash
 vim calico.yaml /192.168 可快速定位
 > - name: CALICO_IPV4POOL_CIDR
 >   value: "10.10.0.0/16"
@@ -432,3 +432,78 @@ hello-kube         ClusterIP      10.111.142.96    <none>        8080/TCP       
 > 设置service type为 nodePort， 理论上能在集群中任意ip均可访问，但是只能在部署pod的节点访问
 
 暂时没找到能在kubeadm 上建立的集群的解决方案。
+
+## port, nodePort, targetPort 分别是指什么？
+
+port 是在k8s集群内部暴露的端口，其他sevice/pod可以通过这个端口开访问
+nodePort： 也就是在k8s集群的node上暴露的端口，供外界访问。宿主机的端口。
+targetPort： pod 本身自己暴露的端口，也就是k8s内部和外界访问的流量最终都会到这里。
+
+## configMap的值变了为什么 pod引用的内容没变？
+
+congMapYaml
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-kube-config
+  labels:
+    name: hello
+data:
+  MESSAGE: "message"
+  name: "hello"
+```
+
+service with deployments Yaml
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-kube-d
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: hello-kube-d
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-kube-d
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-kube-d
+  template:
+    metadata:
+      labels:
+        app: hello-kube-d
+    spec:
+      containers:
+      - name: hello-kube-d
+        image: paulbouwer/hello-kubernetes:1.8
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MESSAGE
+          valueFrom:
+            configMapKeyRef:
+              name: hello-kube-config
+              key: MESSAGE # 这里引用的是configMap的值
+```
+
+答案： 
+
+当configMap作为 environment variable 加载到pod中，当configMap对应的key发生改变时，需要重启pod才能生效。
+
+当confgiMap 作为卷mount到系统中，变更将自动生效，但是有延迟，在下次ttl检查之前不会生效，之后才会成效。
+
+
+## 集群无法部署pod
+
+解决方法： 需要安装网络插件，安装完成之后 coreDNS的pod才会启起来，之后才可以用。
