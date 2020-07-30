@@ -148,5 +148,13 @@ metadata:
 
 ### configMap
 ```
-
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-kube-config
+  labels:
+    name: hello
+data:
+  MESSAGE: "message"
+  name: "hello"
 ```
