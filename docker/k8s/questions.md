@@ -103,8 +103,18 @@ sudo kubeadm init 出现下列错误
 sudo swapoff -a
 ```
 
+永久关闭：
+
+
+```bash
+vim /etc/fstab
+注释掉下边这行
+# /dev/mapper/k8s1--vg-swap_1 none            swap    sw              0       0
+```
+
 参考
 
+[How do I disable swap? - Ask Ubuntu](https://askubuntu.com/questions/214805/how-do-i-disable-swap)
 [https://github.com/kubernetes/kubeadm/issues/610](https://github.com/kubernetes/kubeadm/issues/610)
 
 --- 
