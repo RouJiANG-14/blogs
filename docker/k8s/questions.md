@@ -513,7 +513,19 @@ spec:
 
 当confgiMap 作为卷mount到系统中，变更将自动生效，但是有延迟，在下次ttl检查之前不会生效，之后才会成效。
 
+--- 
 
 ## 集群无法部署pod
 
 解决方法： 需要安装网络插件，安装完成之后 coreDNS的pod才会启起来，之后才可以用。
+
+--- 
+
+如何显示kubeadm join的command
+
+> kubeadm token create --print-join-command
+
+参考： 
+
+https://stackoverflow.com/questions/51126164/how-do-i-find-the-join-command-for-kubeadm-on-the-master
+ 
