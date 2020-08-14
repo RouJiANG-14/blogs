@@ -114,3 +114,97 @@
 > 解除死锁：
 
 破坏掉上述四个条件中的一个即可。
+
+## 守护线程和用户线程
+
+> 简介：
+
+Java中的线程分两类： daemon 线程和 user线程。
+
+JVM在启动的时候调用main函数，main函数所在的线程就是一个用户线程，在JVM内部同时也启动了很多守护线程，比如垃圾回收。
+
+> 区别
+
+当最后一个非守护线程结束时，JVM会正常退出，而不管是否有守护线程。
+
+> 设置守护线程
+
+```java
+Thread daemonThread = new Thread(() -> {
+    while (true) {
+        System.out.println("This is daemon thread");
+    }
+});
+daemonThread.setDaemon(true);
+daemonThread.start();
+```
+
+> ThreadLocal
+
+作用：
+
+ThreadLocal 是JDK包提供的，它提供了线程本地变量，也就是如果你创建了一个threadlocal变量，那么访问这个变量的每个线程都会有一个本地副本。
+
+当多个线程操作这个变量的时候，实际操作的是自己本地内存里的变量，从而避免了线程安全访问问题。
+
+原理：
+
+Thread类中有一个threadLocals和inheritableThreadLocals, 他们都是ThreadLocalMap类型的变量，而ThreadLocal是一个定制化的HashMap。
+
+默认情况下每个线程中的这两个变量都为null，只有当线程第一次调用ThreadLocal的set或get方法的时候才会去初始化。
+
+其实每个线程的本地变量不是存在ThreadLocal实例的，而是存在调用线程的threadLocals变量里边。
+
+也就是说，ThreadLocal类型的本地变量存放在具体的线程内存空间中。
+
+注意：
+
+使用完之后一定要调用remove方法，否则会一直存在线程内存空间中，可能会造成内存溢出。
+
+threadLocal不支持继承，父线程对threadLocal的设置，在父线程中创建的自线程是无法获取到值的。
+
+inheritable Demo 
+
+```java
+localVariable.set("aaaa");
+new Thread(() -> {
+    System.out.println("child thread :" + localVariable.get());
+}).start();
+
+System.out.println("parent thread " + localVariable.get());
+
+output
+// parent thread aaaa
+//child thread :null
+```
+
+> InheritableThreadLocal
+
+与ThreadLocal之间的不同就是父子线程之间可以共享该变量。
+
+demo
+
+```java
+static InheritableThreadLocal<String> inheritableThreadLocal = new InheritableThreadLocal<>();
+
+public static void main(String[] args) throws InterruptedException {
+    inheritableThreadLocal.set("value");
+    final Thread thread = new Thread(() -> {
+        System.out.println("child thread get " + inheritableThreadLocal.get());
+        final Thread thread1 = new Thread(() -> {
+            System.out.println("child child thread get " + inheritableThreadLocal.get());
+        });
+        thread1.start();
+        try {
+            thread1.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        inheritableThreadLocal.remove();
+    });
+    System.out.println("before child thread remove " + inheritableThreadLocal.get());
+    thread.start();
+    thread.join();
+    System.out.println("after child thread remove " + inheritableThreadLocal.get());
+}
+```
