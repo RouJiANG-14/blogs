@@ -38,6 +38,8 @@
 - [ci-init](./gitlab/ci-init.md)
 - [ci-java](./gitlab/ci-java.md)
 ## java
+### JVM
+- [useful-command](./java/JVM/useful-command.md)
 ### arch-unit
 - [arch-unit-custom-validate-rule](./java/arch-unit/arch-unit-custom-validate-rule.md)
 ### basic
