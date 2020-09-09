@@ -90,6 +90,8 @@
 - [syntax-basic](./objective-c/syntax-basic.md)
 ## python
 - [virtual-env](./python/virtual-env.md)
+## random
+- [tooler](./random/tooler.md)
 ## tweak
 ### MacOs
 - [interface-inspector](./tweak/MacOs/interface-inspector.md)
