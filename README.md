@@ -13,6 +13,7 @@
 - [datagrip-bug](./db/datagrip-bug.md)
 ### mysql
 - [alter-table](./db/mysql/alter-table.md)
+- [distinct](./db/mysql/distinct.md)
 - [row-format](./db/mysql/row-format.md)
 ## docker
 - [command-back](./docker/command-back.md)
@@ -57,6 +58,8 @@
 - [route-map](./java/concurrency/route-map/route-map.md)
 ### gradle
 - [history](./java/gradle/history.md)
+### maven
+- [git-hooks](./java/maven/git-hooks.md)
 ### reactive-streaming
 - [flux](./java/reactive-streaming/flux.md)
 - [zip](./java/reactive-streaming/zip.md)
