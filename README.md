@@ -48,6 +48,7 @@
 - [functionalProjram](./java/basic/functionalProjram.md)
 - [future](./java/basic/future.md)
 - [history](./java/basic/history.md)
+- [keep-sort-query](./java/basic/keep-sort-query.md)
 - [math](./java/basic/math.md)
 - [transient](./java/basic/transient.md)
 ### concurrency
