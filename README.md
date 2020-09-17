@@ -8,6 +8,7 @@
 - [day1](./agile/CAC/day1.md)
 - [day2](./agile/CAC/day2.md)
 - [IKM](./agile/IKM.md)
+- [code-review](./agile/code-review.md)
 - [自组织团队](./agile/自组织团队.md)
 ## db
 - [datagrip-bug](./db/datagrip-bug.md)
