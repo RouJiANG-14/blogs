@@ -96,6 +96,7 @@
 ## python
 - [virtual-env](./python/virtual-env.md)
 ## random
+- [bad-code](./random/bad-code.md)
 - [tooler](./random/tooler.md)
 ## tweak
 ### MacOs
