@@ -8,6 +8,7 @@
 - [day1](./agile/CAC/day1.md)
 - [day2](./agile/CAC/day2.md)
 - [IKM](./agile/IKM.md)
+- [code-review](./agile/code-review.md)
 - [自组织团队](./agile/自组织团队.md)
 ## db
 - [datagrip-bug](./db/datagrip-bug.md)
@@ -48,6 +49,7 @@
 - [functionalProjram](./java/basic/functionalProjram.md)
 - [future](./java/basic/future.md)
 - [history](./java/basic/history.md)
+- [keep-sort-query](./java/basic/keep-sort-query.md)
 - [math](./java/basic/math.md)
 - [transient](./java/basic/transient.md)
 ### concurrency
@@ -94,6 +96,7 @@
 ## python
 - [virtual-env](./python/virtual-env.md)
 ## random
+- [bad-code](./random/bad-code.md)
 - [tooler](./random/tooler.md)
 ## tweak
 ### MacOs
