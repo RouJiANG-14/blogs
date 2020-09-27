@@ -62,6 +62,7 @@
 - [history](./java/gradle/history.md)
 ### maven
 - [git-hooks](./java/maven/git-hooks.md)
+- [maven-lifecycle](./java/maven/maven-lifecycle.md)
 ### reactive-streaming
 - [flux](./java/reactive-streaming/flux.md)
 - [zip](./java/reactive-streaming/zip.md)
@@ -97,6 +98,8 @@
 - [virtual-env](./python/virtual-env.md)
 ## random
 - [bad-code](./random/bad-code.md)
+- [code-base](./random/code-base.md)
+- [front-end-back-end](./random/front-end-back-end.md)
 - [tooler](./random/tooler.md)
 ## tweak
 ### MacOs
