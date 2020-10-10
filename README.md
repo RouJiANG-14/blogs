@@ -100,6 +100,8 @@
 - [bad-code](./random/bad-code.md)
 - [code-base](./random/code-base.md)
 - [front-end-back-end](./random/front-end-back-end.md)
+- [how-to-learning-in-a-bad-project](./random/how-to-learning-in-a-bad-project.md)
+- [how-to-revolution-big-team](./random/how-to-revolution-big-team.md)
 - [tooler](./random/tooler.md)
 ## tweak
 ### MacOs
