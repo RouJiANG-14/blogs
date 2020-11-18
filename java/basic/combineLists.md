@@ -11,8 +11,8 @@
 
     List<String> mergedList = Stream.of(list1.stream(), list2.stream(), list3.stream())
         .flatMap(r -> r)
-        .collect(Collectors.toList());
-
+        .collect(Collectors.toList())
+;
     System.out.println(mergedList); // [1, 2, 3, 4, 5, 6]
 ```
 
