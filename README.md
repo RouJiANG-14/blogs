@@ -64,6 +64,8 @@
 ### maven
 - [git-hooks](./java/maven/git-hooks.md)
 - [maven-lifecycle](./java/maven/maven-lifecycle.md)
+### mybatis
+- [Example](./java/mybatis/Example.md)
 ### reactive-streaming
 - [flux](./java/reactive-streaming/flux.md)
 - [zip](./java/reactive-streaming/zip.md)
