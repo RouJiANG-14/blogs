@@ -49,6 +49,7 @@
 - [actor](./java/basic/actor.md)
 - [combineLists](./java/basic/combineLists.md)
 - [functionalProgram](./java/basic/functionalProgram.md)
+- [functionalProgram2](./java/basic/functionalProgram2.md)
 - [future](./java/basic/future.md)
 - [history](./java/basic/history.md)
 - [keep-sort-query](./java/basic/keep-sort-query.md)
