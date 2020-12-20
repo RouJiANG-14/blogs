@@ -46,7 +46,8 @@
 - [arch-unit-custom-validate-rule](./java/arch-unit/arch-unit-custom-validate-rule.md)
 ### basic
 - [AbstractCollection](./java/basic/AbstractCollection.md)
-- [functionalProjram](./java/basic/functionalProjram.md)
+- [combineLists](./java/basic/combineLists.md)
+- [functionalProgram](./java/basic/functionalProgram.md)
 - [future](./java/basic/future.md)
 - [history](./java/basic/history.md)
 - [keep-sort-query](./java/basic/keep-sort-query.md)
@@ -63,6 +64,8 @@
 ### maven
 - [git-hooks](./java/maven/git-hooks.md)
 - [maven-lifecycle](./java/maven/maven-lifecycle.md)
+### mybatis
+- [Example](./java/mybatis/Example.md)
 ### reactive-streaming
 - [flux](./java/reactive-streaming/flux.md)
 - [zip](./java/reactive-streaming/zip.md)
@@ -103,6 +106,7 @@
 - [how-to-build-a-maintainable-project](./random/how-to-build-a-maintainable-project.md)
 - [how-to-learning-in-a-bad-project](./random/how-to-learning-in-a-bad-project.md)
 - [how-to-revolution-big-team](./random/how-to-revolution-big-team.md)
+- [tdd](./random/tdd.md)
 - [tooler](./random/tooler.md)
 ## tweak
 ### MacOs

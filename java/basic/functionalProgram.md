@@ -46,7 +46,7 @@ public class Taxi {
 是不是很简答，一眼就能看明。这么做没问题，但是想一想，你工作要一直写这样的代码是不是很无聊，对于个人成长来说这相当于没成长呀。
 这代码毕业生也能写出来，工作两年也写这代码？？？
 
-## 纯函数式实现
+## 纯函数式实现第一版
 ```Java
 public class Taxi {
     
@@ -82,5 +82,56 @@ public class Taxi {
 
 ```
 
-是不是方法都是纯函数，没有一点副作用，写起来是不是也很优雅。 
-需求里的每个实现都是纯函数的，我只关注我当前这一步的计算逻辑。具体的组装放到了外边。
+## 纯函数实现第二版
+
+第一版的写法有点硬， 因为所有的方法都是`ToDoubleTripleIntFunction`类型的，并且还有很多不需要的参数。
+
+这一版优化了，所有的方法都是java基本方法，只是在使用的地方去组合成function的样子， 并且删除了其他方法不需要的参数列表， 用闭包的方式去传递 所需要的参数
+
+
+
+```java
+    // 需求一
+    private double getBasicFee(double initValue, int distance) {
+        return initValue + distance * BASIC_UNIT_PRICE;
+    }
+
+    // 需求二
+    private double getLongDistanceFee(double initValue, int distance) {
+        return initValue + (distance - NORMAL_DISTANCE <= 0 ? 0D : (distance - NORMAL_DISTANCE) * LONG_DISTANCE_UNIT_PRICE);
+    }
+
+    // 需求三
+    private double getWaitTimeFee(double initValue, int waitTime) {
+        return initValue + waitTime * WAIT_TIME_UNIT_PRICE;
+    }
+
+    public double calculate(int distance, int waitTime) {
+        // 这里组装函数流 
+        ToDoubleBiIntFunction getBasicFee = this::getBasicFee;
+        return getBasicFee
+           // 这里用到了匿名方法
+            .thenCompose(this::getLongDistanceFee)
+            // 这里用到了闭包
+            .thenCompose((initValue, any) -> getWaitTimeFee(initValue, waitTime))
+            .applyAsDouble(0D, distance);
+    }
+
+    @FunctionalInterface
+    private interface ToDoubleBiIntFunction {
+
+        double applyAsDouble(double f, int t);
+
+        default ToDoubleBiIntFunction thenCompose(ToDoubleBiIntFunction next) {
+            return (double first, int second) -> next.applyAsDouble(applyAsDouble(first, second), second);
+        }
+    }
+```
+
+## 总结
+
+函数式的第二版是在项目中实际使用的过程中，自己领悟和发现的。
+
+ 第一版的函数式写法，大家表示很陌生，并且不愿意动，也不愿意写。
+ 
+ 经过第二版的写法优化，和闭包的使用，大家觉得易读和简单，并且在新的流程中已经使用这种写法了。
