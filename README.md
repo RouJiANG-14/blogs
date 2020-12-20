@@ -46,6 +46,7 @@
 - [arch-unit-custom-validate-rule](./java/arch-unit/arch-unit-custom-validate-rule.md)
 ### basic
 - [AbstractCollection](./java/basic/AbstractCollection.md)
+- [actor](./java/basic/actor.md)
 - [combineLists](./java/basic/combineLists.md)
 - [functionalProgram](./java/basic/functionalProgram.md)
 - [future](./java/basic/future.md)
