@@ -108,10 +108,12 @@
 - [how-to-build-a-maintainable-project](./random/how-to-build-a-maintainable-project.md)
 - [how-to-learning-in-a-bad-project](./random/how-to-learning-in-a-bad-project.md)
 - [how-to-revolution-big-team](./random/how-to-revolution-big-team.md)
+- [hw-agile](./random/hw-agile.adoc)
 - [tdd](./random/tdd.md)
 - [tooler](./random/tooler.md)
 ## summary
 ### 2021
+- [Jan](./summary/2021/Jan.adoc)
 ## tweak
 ### MacOs
 - [interface-inspector](./tweak/MacOs/interface-inspector.md)
