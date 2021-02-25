@@ -90,6 +90,9 @@
 - [use-log](./javaScript/ng2-file-upload/use-log.md)
 ### rxjs
 - [observer](./javaScript/rxjs/observer.md)
+## life
+### BG
+- [rent-house](./life/BG/rent-house.adoc)
 ## network
 - [Intranet](./network/Intranet.md)
 - [router](./network/router.md)
