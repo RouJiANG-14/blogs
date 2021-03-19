@@ -93,6 +93,7 @@
 ## life
 ### BG
 - [rent-house](./life/BG/rent-house.adoc)
+- [RoleChange](./life/RoleChange.adoc)
 ## network
 - [Intranet](./network/Intranet.md)
 - [router](./network/router.md)
@@ -116,6 +117,7 @@
 - [tooler](./random/tooler.md)
 ## summary
 ### 2021
+- [Feb](./summary/2021/Feb.adoc)
 - [Jan](./summary/2021/Jan.adoc)
 ## tweak
 ### MacOs
