@@ -94,6 +94,7 @@
 ### BG
 - [rent-house](./life/BG/rent-house.adoc)
 - [RoleChange](./life/RoleChange.adoc)
+- [RoleChange2](./life/RoleChange2.adoc)
 ## network
 - [Intranet](./network/Intranet.md)
 - [router](./network/router.md)
