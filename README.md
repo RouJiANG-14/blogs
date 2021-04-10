@@ -116,10 +116,12 @@
 - [hw-agile](./random/hw-agile.adoc)
 - [tdd](./random/tdd.md)
 - [tooler](./random/tooler.md)
+- [you-are-not-alone](./random/you-are-not-alone.ad)
 ## summary
 ### 2021
 - [Feb](./summary/2021/Feb.adoc)
 - [Jan](./summary/2021/Jan.adoc)
+- [Mar](./summary/2021/Mar.ad)
 ## tweak
 ### MacOs
 - [interface-inspector](./tweak/MacOs/interface-inspector.md)
