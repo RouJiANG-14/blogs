@@ -37,7 +37,7 @@ get_all_files() {
                 echo $(get_header $depth)" "$f >>README.md
                 $(get_all_files $new_folder $depth)
             fi
-        elif [[ $f != "README.md" ]] && [[ $f == *".md" || $f == *".adoc" ]]; then
+        elif [[ $f != "README.md" ]] && [[ $f == *".md" || $f == *".adoc" || $f == *".ad" ]]; then
             path=$1"/"$f
             file_name=${f%.*}
             echo "- [$file_name]($path)" >>README.md
