@@ -1,0 +1,35 @@
+== PDI labour rtsCode Contract
+[example, 文档说明]
+Aftermarket-product服务中提供获取所有可以做PDI检查labor的rtsCode的api
+
+=== Request
+|===
+|service-name | url | request-method | query-string | 说明
+
+| aftermarket-product-management
+| /api/pdi-labor
+| GET
+| N/A
+|
+|===
+
+=== Response
+
+|===
+| 字段名称 | 类型 | 说明
+
+| PdiLabors | List<PdiLaborDto> | 所有可以做pdi检查的labor
+| PdiLaborDto | Object | pdi labor
+| rtsCode | string | labor 的 rtsCode
+|===
+
+==== response json demo
+
+[source,json5]
+----
+[
+    {
+        "rtsCode": "001"
+    }
+]
+----
