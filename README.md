@@ -44,6 +44,7 @@
 - [useful-command](./java/JVM/useful-command.md)
 ### arch-unit
 - [arch-unit-custom-validate-rule](./java/arch-unit/arch-unit-custom-validate-rule.md)
+- [sonar-fix-skills](./java/arch-unit/sonar-fix-skills.adoc)
 ### basic
 - [AbstractCollection](./java/basic/AbstractCollection.md)
 - [actor](./java/basic/actor.md)
@@ -109,6 +110,8 @@
 ## random
 - [bad-code](./random/bad-code.md)
 - [code-base](./random/code-base.md)
+- [dark-horse-demo](./random/dark-horse-demo.adoc)
+- [dark-horse-sharing-plan](./random/dark-horse-sharing-plan.adoc)
 - [front-end-back-end](./random/front-end-back-end.md)
 - [how-to-build-a-maintainable-project](./random/how-to-build-a-maintainable-project.md)
 - [how-to-learning-in-a-bad-project](./random/how-to-learning-in-a-bad-project.md)
@@ -127,3 +130,6 @@
 - [interface-inspector](./tweak/MacOs/interface-inspector.md)
 - [lldb-debug-command](./tweak/MacOs/lldb-debug-command.md)
 - [tools](./tweak/MacOs/tools.md)
+## work
+### PDI
+- [contract](./work/PDI/contract.adoc)
