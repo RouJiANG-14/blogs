@@ -125,11 +125,15 @@
 - [Feb](./summary/2021/Feb.adoc)
 - [Jan](./summary/2021/Jan.adoc)
 - [Mar](./summary/2021/Mar.ad)
+## transalte
+- [querydsl-criteriabuilder-specification](./transalte/querydsl-criteriabuilder-specification.adoc)
 ## tweak
 ### MacOs
 - [interface-inspector](./tweak/MacOs/interface-inspector.md)
 - [lldb-debug-command](./tweak/MacOs/lldb-debug-command.md)
 - [tools](./tweak/MacOs/tools.md)
+## ubuntu
+- [set-up](./ubuntu/set-up.adoc)
 ## work
 ### PDI
 - [contract](./work/PDI/contract.adoc)
