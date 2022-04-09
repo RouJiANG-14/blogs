@@ -34,6 +34,7 @@
 - [send-email](./dotnet/core/send-email.md)
 - [wcf](./dotnet/core/wcf.md)
 - [web-api](./dotnet/core/web-api.md)
+## fonts
 ## github
 - [auto-generate](./github/auto-generate.md)
 ## gitlab
@@ -134,6 +135,3 @@
 - [tools](./tweak/MacOs/tools.md)
 ## ubuntu
 - [set-up](./ubuntu/set-up.adoc)
-## work
-### PDI
-- [contract](./work/PDI/contract.adoc)
