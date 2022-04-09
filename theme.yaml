@@ -1,4 +1,11 @@
 extends: base
+font:
+  catalog:
+    song: # 宋体，请保证fonts文件中包含如下字体
+      normal: KaiGenGothicCN-Regular.ttf
+      bold: KaiGenGothicCN-Bold.tff
+      italic: KaiGenGothicCN-Regular-Italic.ttf
+      bold_italic: KaiGenGothicCN-Bold-Italic.ttf
 page:
   layout: portrait
   margin: [0.75in, 1in, 0.75in, 1in]
