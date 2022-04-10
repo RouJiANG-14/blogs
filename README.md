@@ -97,6 +97,8 @@
 - [rent-house](./life/BG/rent-house.adoc)
 - [RoleChange](./life/RoleChange.adoc)
 - [RoleChange2](./life/RoleChange2.adoc)
+### router
+- [route](./life/router/route.adoc)
 ## network
 - [Intranet](./network/Intranet.md)
 - [router](./network/router.md)
