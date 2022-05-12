@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: auto_generate_readme
+name: build-site
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -36,3 +36,14 @@ jobs:
         add: "*.md"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: asciidoctor-ghpages
+      uses: manoelcampos/asciidoctor-ghpages-action@v2.2.1
+      with:
+        # asciidoctor_params: --attribute=nofooter
+        pdf_build: true
+        # adoc_file_ext: .ascii # default is .adoc
+        # source_dir: docs/ # default is .
+        # slides_build: true
+        # pre_build:
+        # post_build:
+
