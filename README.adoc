@@ -76,7 +76,7 @@
 
 == github
 
-. link:(./github/auto-generate.md)[auto-generate]
+. link:(./github/auto-generate.adoc)[auto-generate]
 
 == gitlab
 
