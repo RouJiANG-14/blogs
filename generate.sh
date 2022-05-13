@@ -34,17 +34,17 @@ get_all_files() {
             new_folder=$1"/"$f
             if [[ $f != *"image"* ]]; then
                 let "depth=$(get_depth $new_folder)+1"
-                echo $(get_header $depth)" "$f"\r\n" >>README.md
+                echo $(get_header $depth)" "$f"\r\n" >>README.adoc
                 $(get_all_files $new_folder $depth)
             fi
-        elif [[ $f != "README.md" ]] && [[ $f == *".md" || $f == *".adoc" || $f == *".ad" ]]; then
+        elif [[ $f != "README.adoc" ]] && [[ $f == *".md" || $f == *".adoc" || $f == *".ad" ]]; then
             path=$1"/"$f
             file_name=${f%.*}
-            echo ". link:($path)[$file_name]\n" >>README.md
+            echo ". link:($path)[$file_name]\n" >>README.adoc
         fi
     done
 
 }
 
-echo "= Blogs List\r\n" >README.md
+echo "= Blogs List\r\n" >README.adoc
 $(get_all_files . 1)
