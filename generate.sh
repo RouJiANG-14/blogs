@@ -46,5 +46,5 @@ get_all_files() {
 
 }
 
-echo "= Blogs List\r\n" >README.adoc
+echo -e "= Blogs List\r\n" >README.adoc
 $(get_all_files . 1)
