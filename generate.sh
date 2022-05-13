@@ -23,7 +23,7 @@ increase() {
 }
 
 get_depth() {
-    # $(pure_log $1)
+#     $(pure_log $1)
     echo "$1" | tr -cd '/' | wc -c
 }
 
@@ -38,9 +38,10 @@ get_all_files() {
                 $(get_all_files $new_folder $depth)
             fi
         elif [[ $f != "README.adoc" ]] && [[ $f == *".md" || $f == *".adoc" || $f == *".ad" ]]; then
-            path=$1"/"$f
+            path=$1"/"${f%.*}
+            path=${path/./""}
             file_name=${f%.*}
-            echo  -e ". link:($path)[$file_name]\n" >>README.adoc
+            echo  -e ". link:$path[$file_name]\n" >>README.adoc
         fi
     done
 
