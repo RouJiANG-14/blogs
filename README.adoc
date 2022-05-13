@@ -1,4 +1,5 @@
-= Blogs List\r\n
+= Blogs List
+
 == CSharp
 
 . link:(./CSharp/enum.md)[enum]
