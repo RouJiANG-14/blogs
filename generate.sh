@@ -15,7 +15,7 @@ pure_log_content() {
 get_header() {
     num=$1
     v=$(printf "%-${num}s" "=")
-    echo "\n${v// /=}"
+    echo -e "\n${v// /=}"
 }
 
 increase() {
@@ -34,13 +34,13 @@ get_all_files() {
             new_folder=$1"/"$f
             if [[ $f != *"image"* ]]; then
                 let "depth=$(get_depth $new_folder)+1"
-                echo $(get_header $depth)" "$f"\r\n" >>README.adoc
+                echo -e $(get_header $depth)" "$f"\r\n" >>README.adoc
                 $(get_all_files $new_folder $depth)
             fi
         elif [[ $f != "README.adoc" ]] && [[ $f == *".md" || $f == *".adoc" || $f == *".ad" ]]; then
             path=$1"/"$f
             file_name=${f%.*}
-            echo ". link:($path)[$file_name]\n" >>README.adoc
+            echo  -e ". link:($path)[$file_name]\n" >>README.adoc
         fi
     done
 
