@@ -33,7 +33,7 @@ jobs:
         author_name: GITHUB_GENERATOR
         author_email: 1483523635@qq.com
         message: "AUTO GENERATE README"
-        add: "*.md"
+        add: "*"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: asciidoctor-ghpages
