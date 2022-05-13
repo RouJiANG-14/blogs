@@ -8,8 +8,6 @@
 
 . link:(./MacOSApp/StoryBoard.md)[StoryBoard]
 
-. link:(./README.adoc)[README]
-
 . link:(./README.md)[README]
 
 == agile
