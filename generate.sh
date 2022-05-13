@@ -40,13 +40,11 @@ get_all_files() {
         elif [[ $f != "README.md" ]] && [[ $f == *".md" || $f == *".adoc" || $f == *".ad" ]]; then
             path=$1"/"$f
             file_name=${f%.*}
-            echo "* [$file_name]($path)" >>README.md
+            echo ". link:($path)[$file_name]\n" >>README.md
         fi
     done
 
 }
-
-
 
 echo "= Blogs List\r\n" >README.md
 $(get_all_files . 1)
