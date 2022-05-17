@@ -8,8 +8,6 @@
 
 . link:/MacOSApp/StoryBoard[StoryBoard]
 
-. link:/README[README]
-
 == agile
 
 === CAC
