@@ -242,6 +242,8 @@
 
 . link:/random/hw-agile[hw-agile]
 
+. link:/random/micro-service-and-refactor[micro-service-and-refactor]
+
 . link:/random/tdd[tdd]
 
 . link:/random/tooler[tooler]
