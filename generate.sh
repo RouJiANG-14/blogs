@@ -47,5 +47,5 @@ get_all_files() {
 
 }
 
-echo -e "= Blogs List\r\n" >README.adoc
+echo -e "= Blogs List(https://github.com/xiaoquisme/blogs)\r\n" >README.adoc
 $(get_all_files . 1)
