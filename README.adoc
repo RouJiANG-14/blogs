@@ -1,4 +1,4 @@
-= Blogs List(https://github.com/xiaoquisme/blogs)
+= Blog List link:https://github.com/xiaoquisme/blogs[github]
 
 == CSharp
 
