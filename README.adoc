@@ -244,13 +244,13 @@
 
 . link:/random/micro-service-and-refactor[micro-service-and-refactor]
 
+. link:/random/package-machine-roadmap[package-machine-roadmap]
+
 . link:/random/tdd[tdd]
 
 . link:/random/tooler[tooler]
 
 . link:/random/you-are-not-alone[you-are-not-alone]
-
-. link:/random/打包机优化之路[打包机优化之路]
 
 == summary
 
