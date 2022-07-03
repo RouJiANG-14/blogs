@@ -33,7 +33,7 @@
 - id
 > 可以存储任何数据类型的对象
 
-![](./images/数据类型.png)
+![](images/数据类型.png)
 - Boolean (YES/NO)
 > 该类型是由预处理程序的机制添加的
 
@@ -58,8 +58,8 @@ MyFunctions *myFunctions3 = [MyFunctions new];
 ### 属性
 #### getter 和setter自动生成
 > 通过 @property注解来生成，实现接口方显式无需重写getter和setter方法
-![](./images/自动生成getter和setter.png)
-![](./images/getter和setter命名注意.png)
+![](images/自动生成getter和setter.png)
+![](images/getter和setter命名注意.png)
 #### 使用方式
 - [classInstanceName setA:1]
 - classInstanceName.a=1
@@ -83,10 +83,10 @@ MyFunctions *myFunctions3 = [MyFunctions new];
 ## 动态
 ### id 
 有点类似于C#的dynamic，和var不是一个东西
-![](./images/handle_dynamic.png)
+![](images/handle_dynamic.png)
 ### try-catch
 
-![](./images/try-catch.png)
+![](images/try-catch.png)
 
 ## 分类
 类似于C#的拓展方法
@@ -111,7 +111,7 @@ MyFunctions *myFunctions3 = [MyFunctions new];
 ```
 
 ## 协议
-![](./images/protocol.png)
+![](images/protocol.png)
 ```objective-c
 #import <Foundation/Foundation.h>
 

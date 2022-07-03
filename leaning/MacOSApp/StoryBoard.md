@@ -23,7 +23,7 @@
     - 给按钮绑定个单击事件
         我搞了快一天，一直找不到storyboard的UI怎么和controller关联起来的，然后自然也找不到按钮的点击事件
         - 如何关联controller
-        ![](./images/Xcode-add-controller-for-view.png)
+        ![](images/Xcode-add-controller-for-view.png)
         ```objective-c
         #import <Cocoa/Cocoa.h>
         @interface ViewController : NSViewController
@@ -34,7 +34,7 @@
           2. 在左侧文件列表中找到关联的那个controller，按住option键然后点击，出现双屏，一屏是storyboard，一屏是代码
           3. 按住control键，点着那个按钮拖向代码文件。
           4. 出现dialog，填上你的内容
-            ![](./images/add-click-for-button.png)
+            ![](images/add-click-for-button.png)
           5. 结束
           简单的gif
           ![](./images/720p.gif)
@@ -45,10 +45,10 @@
     - 一个确定按钮，点击之后会将信息携带到详情展示页面
     - 两个label，两个输入框
     - 设置view的背景色
-    ![](./images/create.png)
+    ![](images/create.png)
   - 一个详情展示页面
     - 展示上个页面填写的内容
-    ![](./images/detail.png)
+    ![](images/detail.png)
 ### 遇到问题
 1. 代码里如何或者输入框里的内容
 在ViewController.h中绑定两个属性，然后在impl中可以直接使用
@@ -112,17 +112,17 @@
 ```
   * 绑定
 输入名称和拓展的方法一致，省掉set方法
-![](./images/add-bg-color.png)
+![](images/add-bg-color.png)
 3. 如何点击确定跳转到另一个界面呢
 在storyboard界面找到按钮，ctrl拖到它点击之后要跳转的界面
 ![](./images/bind-view-jump.gif)
 之后出现这个dialog
-![](./images/dialog-type.png)
+![](images/dialog-type.png)
 这样就完成了。
 
 4. 如何将值传过去呢
 先看一下两个界面之间建立了啥
-![](./images/jump.png)
+![](images/jump.png)
 是个NSStoryboardSegue类型的东西
 ```objective-c
 @interface NSStoryboardSegue : NSObject

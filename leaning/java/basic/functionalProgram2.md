@@ -2,7 +2,7 @@
 
 ## 基础
 
-[函数式编程一](./functionalProgram.md)
+[函数式编程一](functionalProgram.md)
 
 在java中用函数式的方式去做事情，Happy Path确实很好玩，但是编程中最不好玩的就是异常的情况。
 

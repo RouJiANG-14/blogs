@@ -4,47 +4,47 @@
 * [Hopper](https://www.hopperapp.com/) 神器安装上
 ## 开干
 先打开Interface-inspector 看一下
-![](./images/register.png)
+![](images/register.png)
 
 Hopper打开Interface Inspector的可执行文件
-![](./images/hopper-open-file.png)
-![](./images/interface-Inspector.png)
+![](images/hopper-open-file.png)
+![](images/interface-Inspector.png)
 左侧tab页搜索`register`关键字
-![](./images/find-register-keyword.png)
+![](images/find-register-keyword.png)
 从名字上看`SMEnterLicenseViewController register`像是注册的用到的，点开看一下，反正不要钱。
-![](./images/register_code.png)
+![](images/register_code.png)
 ```
  rax = [r14 enterLicenseViewControllerDidSelectRegister:r15 withLicenseName:r12 code:rbx];
 ```
 应该就这这里了进一步跟进去看一看
-![](./images/withLicenseName.png)
+![](images/withLicenseName.png)
 ` rbx = [rax registerLicenseWithName:r12 code:rcx];` 通过这行代码接着跟
-![](./images/registerLicenseWithName.png)
-![](./images/registerLicenseWithName-code.png)
+![](images/registerLicenseWithName.png)
+![](images/registerLicenseWithName-code.png)
 到这里基本算是跟到头了，`r12`变量就是干这个验证通过没有通过的活的。
 改代码
-![](./images/else-code.png)
+![](images/else-code.png)
 `Modify -> Assemble Instruction`
 else的地方直接改成赋值为1
 ```
 000000010010f39b         mov        r12b, 0x1  
 ```
 `File -> Produce New Executable`生成新的可执行文件，在弹框中选择移除签名
-![](./images/remove-signature.png)
+![](images/remove-signature.png)
 
 打开Interface Inspector
-![](./images/signature-check.png)
+![](images/signature-check.png)
 有签名校验，有意思，接着走
 通过关键字符串`Signature of the Interface inspector is broken`继续找
-![](./images/sign-broken-find.png)
+![](images/sign-broken-find.png)
 点开按着X一层一层找引用
-![](./images/sign-broken-code.png)
-![](./images/sign-broken-code2.png)
+![](images/sign-broken-code.png)
+![](images/sign-broken-code2.png)
 `loc_100024851`找下谁在用,就在当前文件里，goto了
-![](./images/loc_100024851-ref.png)
+![](images/loc_100024851-ref.png)
 `if ([rax codeSignState] != 0x2) goto loc_100024851;`
 改一下goto
-![](./images/change-goto.png)
+![](images/change-goto.png)
 改代码
 ```
 000000010002447e         jne        loc_100024851
@@ -54,10 +54,10 @@ else的地方直接改成赋值为1
 000000010002447e         jne        loc_100024484        
 ```
 保存为新的可执行文件，依旧是移除签名，再次重新打开Interface inspector
-![](./images/register-license.png)
+![](images/register-license.png)
 熟悉的界面又回来了
 `name`和`license`随便输入
-![](./images/tweak-success.png)
+![](images/tweak-success.png)
 
 破解成功
 

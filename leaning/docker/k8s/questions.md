@@ -288,7 +288,7 @@ spec:
       value: "hello-kube"
 ```
 
-![](./images/hostOnly.png)
+![](images/hostOnly.png)
 
 2. hostPort 直接定义Pod网络的方式,通过宿主机和pod之间的端口映射，类似直接起docker 然后做端口映射。
 
@@ -310,7 +310,7 @@ spec:
       value: "hello-kube-host-port"
 ```
 
-![](./images/hostPort.png)
+![](images/hostPort.png)
 
 3. nodePort 定义网络方式
 
@@ -528,4 +528,3 @@ spec:
 参考： 
 
 https://stackoverflow.com/questions/51126164/how-do-i-find-the-join-command-for-kubeadm-on-the-master
- 
