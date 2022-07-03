@@ -1,13 +1,5 @@
 = Blog List link:https://github.com/xiaoquisme/blogs[github]
 
-== CSharp
-
-. link:/CSharp/enum[enum]
-
-== MacOSApp
-
-. link:/MacOSApp/StoryBoard[StoryBoard]
-
 == agile
 
 === CAC
@@ -22,171 +14,221 @@
 
 . link:/agile/自组织团队[自组织团队]
 
-== db
-
-. link:/db/datagrip-bug[datagrip-bug]
-
-=== mysql
-
-. link:/db/mysql/alter-table[alter-table]
-
-. link:/db/mysql/distinct[distinct]
-
-. link:/db/mysql/row-format[row-format]
-
-== docker
-
-. link:/docker/command-back[command-back]
-
-=== k8s
-
-. link:/docker/k8s/basic[basic]
-
-. link:/docker/k8s/questions[questions]
-
-. link:/docker/mysql[mysql]
-
-. link:/docker/quick-remove-mutiple-images[quick-remove-mutiple-images]
-
-== dotnet
-
-=== core
-
-. link:/dotnet/core/cross-domain-request[cross-domain-request]
-
-. link:/dotnet/core/custom-exception-page[custom-exception-page]
-
-. link:/dotnet/core/di-in-console[di-in-console]
-
-. link:/dotnet/core/docker[docker]
-
-. link:/dotnet/core/eshop-on-container[eshop-on-container]
-
-. link:/dotnet/core/nlog[nlog]
-
-. link:/dotnet/core/public-not-found-view[public-not-found-view]
-
-. link:/dotnet/core/send-email[send-email]
-
-. link:/dotnet/core/wcf[wcf]
-
-. link:/dotnet/core/web-api[web-api]
-
 == fonts
 
-== github
+== leaning
 
-. link:/github/auto-generate[auto-generate]
+=== CSharp
 
-== gitlab
+. link:/leaning/CSharp/enum[enum]
 
-. link:/gitlab/ci-init[ci-init]
+=== MacOSApp
 
-. link:/gitlab/ci-java[ci-java]
+. link:/leaning/MacOSApp/StoryBoard[StoryBoard]
 
-== java
+=== db
 
-=== JVM
+. link:/leaning/db/datagrip-bug[datagrip-bug]
 
-. link:/java/JVM/useful-command[useful-command]
+==== mysql
 
-=== arch-unit
+. link:/leaning/db/mysql/alter-table[alter-table]
 
-. link:/java/arch-unit/arch-unit-custom-validate-rule[arch-unit-custom-validate-rule]
+. link:/leaning/db/mysql/distinct[distinct]
 
-. link:/java/arch-unit/sonar-fix-skills[sonar-fix-skills]
+. link:/leaning/db/mysql/row-format[row-format]
 
-=== basic
+=== docker
 
-. link:/java/basic/AbstractCollection[AbstractCollection]
+. link:/leaning/docker/command-back[command-back]
 
-. link:/java/basic/actor[actor]
+==== k8s
 
-. link:/java/basic/combineLists[combineLists]
+. link:/leaning/docker/k8s/basic[basic]
 
-. link:/java/basic/functionalProgram[functionalProgram]
+. link:/leaning/docker/k8s/questions[questions]
 
-. link:/java/basic/functionalProgram2[functionalProgram2]
+. link:/leaning/docker/mysql[mysql]
 
-. link:/java/basic/future[future]
+. link:/leaning/docker/quick-remove-mutiple-images[quick-remove-mutiple-images]
 
-. link:/java/basic/history[history]
+=== dotnet
 
-. link:/java/basic/keep-sort-query[keep-sort-query]
+==== core
 
-. link:/java/basic/math[math]
+. link:/leaning/dotnet/core/cross-domain-request[cross-domain-request]
 
-. link:/java/basic/transient[transient]
+. link:/leaning/dotnet/core/custom-exception-page[custom-exception-page]
 
-=== concurrency
+. link:/leaning/dotnet/core/di-in-console[di-in-console]
+
+. link:/leaning/dotnet/core/docker[docker]
+
+. link:/leaning/dotnet/core/eshop-on-container[eshop-on-container]
+
+. link:/leaning/dotnet/core/nlog[nlog]
+
+. link:/leaning/dotnet/core/public-not-found-view[public-not-found-view]
+
+. link:/leaning/dotnet/core/send-email[send-email]
+
+. link:/leaning/dotnet/core/wcf[wcf]
+
+. link:/leaning/dotnet/core/web-api[web-api]
+
+=== github
+
+. link:/leaning/github/auto-generate[auto-generate]
+
+=== gitlab
+
+. link:/leaning/gitlab/ci-init[ci-init]
+
+. link:/leaning/gitlab/ci-java[ci-java]
+
+=== java
+
+==== JVM
+
+. link:/leaning/java/JVM/useful-command[useful-command]
+
+==== arch-unit
+
+. link:/leaning/java/arch-unit/arch-unit-custom-validate-rule[arch-unit-custom-validate-rule]
+
+. link:/leaning/java/arch-unit/sonar-fix-skills[sonar-fix-skills]
 
 ==== basic
 
-. link:/java/concurrency/basic/thread-process[thread-process]
+. link:/leaning/java/basic/AbstractCollection[AbstractCollection]
 
-. link:/java/concurrency/basic/多线程并发编程[多线程并发编程]
+. link:/leaning/java/basic/actor[actor]
 
-==== route-map
+. link:/leaning/java/basic/combineLists[combineLists]
 
-. link:/java/concurrency/route-map/route-map[route-map]
+. link:/leaning/java/basic/functionalProgram[functionalProgram]
 
-=== gradle
+. link:/leaning/java/basic/functionalProgram2[functionalProgram2]
 
-. link:/java/gradle/history[history]
+. link:/leaning/java/basic/future[future]
 
-=== maven
+. link:/leaning/java/basic/history[history]
 
-. link:/java/maven/git-hooks[git-hooks]
+. link:/leaning/java/basic/keep-sort-query[keep-sort-query]
 
-. link:/java/maven/maven-lifecycle[maven-lifecycle]
+. link:/leaning/java/basic/math[math]
 
-=== mybatis
+. link:/leaning/java/basic/transient[transient]
 
-. link:/java/mybatis/Example[Example]
+==== concurrency
 
-=== reactive-streaming
+===== basic
 
-. link:/java/reactive-streaming/flux[flux]
+. link:/leaning/java/concurrency/basic/thread-process[thread-process]
 
-. link:/java/reactive-streaming/zip[zip]
+. link:/leaning/java/concurrency/basic/多线程并发编程[多线程并发编程]
 
-=== spring
+===== route-map
 
-. link:/java/spring/first-step[first-step]
+. link:/leaning/java/concurrency/route-map/route-map[route-map]
 
-==== history
+==== gradle
 
-. link:/java/spring/history/history[history]
+. link:/leaning/java/gradle/history[history]
 
-==== jpa
+==== maven
 
-. link:/java/spring/jpa/enum[enum]
+. link:/leaning/java/maven/git-hooks[git-hooks]
 
-. link:/java/spring/spring-boot-split-yml[spring-boot-split-yml]
+. link:/leaning/java/maven/maven-lifecycle[maven-lifecycle]
 
-=== test
+==== mybatis
 
-. link:/java/test/Junit-exception-test[Junit-exception-test]
+. link:/leaning/java/mybatis/Example[Example]
 
-. link:/java/test/junit-csv-source[junit-csv-source]
+==== reactive-streaming
 
-== javaScript
+. link:/leaning/java/reactive-streaming/flux[flux]
 
-=== jquery
+. link:/leaning/java/reactive-streaming/zip[zip]
 
-. link:/javaScript/jquery/ajax[ajax]
+==== spring
 
-=== lodash
+. link:/leaning/java/spring/first-step[first-step]
 
-. link:/javaScript/lodash/muteable-operator[muteable-operator]
+===== history
 
-=== ng2-file-upload
+. link:/leaning/java/spring/history/history[history]
 
-. link:/javaScript/ng2-file-upload/use-log[use-log]
+===== jpa
 
-=== rxjs
+. link:/leaning/java/spring/jpa/enum[enum]
 
-. link:/javaScript/rxjs/observer[observer]
+. link:/leaning/java/spring/spring-boot-split-yml[spring-boot-split-yml]
+
+==== test
+
+. link:/leaning/java/test/Junit-exception-test[Junit-exception-test]
+
+. link:/leaning/java/test/junit-csv-source[junit-csv-source]
+
+=== javaScript
+
+==== jquery
+
+. link:/leaning/javaScript/jquery/ajax[ajax]
+
+==== lodash
+
+. link:/leaning/javaScript/lodash/muteable-operator[muteable-operator]
+
+==== ng2-file-upload
+
+. link:/leaning/javaScript/ng2-file-upload/use-log[use-log]
+
+==== rxjs
+
+. link:/leaning/javaScript/rxjs/observer[observer]
+
+=== network
+
+. link:/leaning/network/Intranet[Intranet]
+
+. link:/leaning/network/router[router]
+
+=== nginx
+
+. link:/leaning/nginx/first-step[first-step]
+
+=== nuget
+
+. link:/leaning/nuget/publish-package[publish-package]
+
+=== objective-c
+
+. link:/leaning/objective-c/syntax-basic[syntax-basic]
+
+=== python
+
+. link:/leaning/python/virtual-env[virtual-env]
+
+=== transalte
+
+. link:/leaning/transalte/querydsl-criteriabuilder-specification[querydsl-criteriabuilder-specification]
+
+=== tweak
+
+==== MacOs
+
+. link:/leaning/tweak/MacOs/interface-inspector[interface-inspector]
+
+. link:/leaning/tweak/MacOs/lldb-debug-command[lldb-debug-command]
+
+. link:/leaning/tweak/MacOs/tools[tools]
+
+=== ubuntu
+
+. link:/leaning/ubuntu/set-up[set-up]
 
 == life
 
@@ -201,28 +243,6 @@
 === router
 
 . link:/life/router/route[route]
-
-== network
-
-. link:/network/Intranet[Intranet]
-
-. link:/network/router[router]
-
-== nginx
-
-. link:/nginx/first-step[first-step]
-
-== nuget
-
-. link:/nuget/publish-package[publish-package]
-
-== objective-c
-
-. link:/objective-c/syntax-basic[syntax-basic]
-
-== python
-
-. link:/python/virtual-env[virtual-env]
 
 == random
 
@@ -263,22 +283,4 @@
 . link:/summary/2021/Jan[Jan]
 
 . link:/summary/2021/Mar[Mar]
-
-== transalte
-
-. link:/transalte/querydsl-criteriabuilder-specification[querydsl-criteriabuilder-specification]
-
-== tweak
-
-=== MacOs
-
-. link:/tweak/MacOs/interface-inspector[interface-inspector]
-
-. link:/tweak/MacOs/lldb-debug-command[lldb-debug-command]
-
-. link:/tweak/MacOs/tools[tools]
-
-== ubuntu
-
-. link:/ubuntu/set-up[set-up]
 
