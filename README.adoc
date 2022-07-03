@@ -46,6 +46,8 @@
 
 . link:/docker/mysql[mysql]
 
+. link:/docker/quick-remove-mutiple-images[quick-remove-mutiple-images]
+
 == dotnet
 
 === core
