@@ -1,0 +1,7 @@
+= 如何写测试
+
+== 普通的单元测试
+
+== 参数化测试
+
+link:https://crates.io/crates/rstest[rstest]
