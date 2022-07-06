@@ -18,14 +18,6 @@
 
 == leaning
 
-=== CSharp
-
-. link:/leaning/CSharp/enum[enum]
-
-=== MacOSApp
-
-. link:/leaning/MacOSApp/StoryBoard[StoryBoard]
-
 === db
 
 . link:/leaning/db/datagrip-bug[datagrip-bug]
@@ -44,6 +36,8 @@
 
 ==== k8s
 
+. link:/leaning/docker/k8s/2[2]
+
 . link:/leaning/docker/k8s/basic[basic]
 
 . link:/leaning/docker/k8s/questions[questions]
@@ -51,30 +45,6 @@
 . link:/leaning/docker/mysql[mysql]
 
 . link:/leaning/docker/quick-remove-mutiple-images[quick-remove-mutiple-images]
-
-=== dotnet
-
-==== core
-
-. link:/leaning/dotnet/core/cross-domain-request[cross-domain-request]
-
-. link:/leaning/dotnet/core/custom-exception-page[custom-exception-page]
-
-. link:/leaning/dotnet/core/di-in-console[di-in-console]
-
-. link:/leaning/dotnet/core/docker[docker]
-
-. link:/leaning/dotnet/core/eshop-on-container[eshop-on-container]
-
-. link:/leaning/dotnet/core/nlog[nlog]
-
-. link:/leaning/dotnet/core/public-not-found-view[public-not-found-view]
-
-. link:/leaning/dotnet/core/send-email[send-email]
-
-. link:/leaning/dotnet/core/wcf[wcf]
-
-. link:/leaning/dotnet/core/web-api[web-api]
 
 === github
 
@@ -85,110 +55,6 @@
 . link:/leaning/gitlab/ci-init[ci-init]
 
 . link:/leaning/gitlab/ci-java[ci-java]
-
-=== java
-
-==== JVM
-
-. link:/leaning/java/JVM/useful-command[useful-command]
-
-==== arch-unit
-
-. link:/leaning/java/arch-unit/arch-unit-custom-validate-rule[arch-unit-custom-validate-rule]
-
-. link:/leaning/java/arch-unit/sonar-fix-skills[sonar-fix-skills]
-
-==== basic
-
-. link:/leaning/java/basic/AbstractCollection[AbstractCollection]
-
-. link:/leaning/java/basic/actor[actor]
-
-. link:/leaning/java/basic/combineLists[combineLists]
-
-. link:/leaning/java/basic/functionalProgram[functionalProgram]
-
-. link:/leaning/java/basic/functionalProgram2[functionalProgram2]
-
-. link:/leaning/java/basic/future[future]
-
-. link:/leaning/java/basic/history[history]
-
-. link:/leaning/java/basic/keep-sort-query[keep-sort-query]
-
-. link:/leaning/java/basic/math[math]
-
-. link:/leaning/java/basic/transient[transient]
-
-==== concurrency
-
-===== basic
-
-. link:/leaning/java/concurrency/basic/thread-process[thread-process]
-
-. link:/leaning/java/concurrency/basic/多线程并发编程[多线程并发编程]
-
-===== route-map
-
-. link:/leaning/java/concurrency/route-map/route-map[route-map]
-
-==== gradle
-
-. link:/leaning/java/gradle/history[history]
-
-==== maven
-
-. link:/leaning/java/maven/git-hooks[git-hooks]
-
-. link:/leaning/java/maven/maven-lifecycle[maven-lifecycle]
-
-==== mybatis
-
-. link:/leaning/java/mybatis/Example[Example]
-
-==== reactive-streaming
-
-. link:/leaning/java/reactive-streaming/flux[flux]
-
-. link:/leaning/java/reactive-streaming/zip[zip]
-
-==== spring
-
-. link:/leaning/java/spring/first-step[first-step]
-
-===== history
-
-. link:/leaning/java/spring/history/history[history]
-
-===== jpa
-
-. link:/leaning/java/spring/jpa/enum[enum]
-
-. link:/leaning/java/spring/spring-boot-split-yml[spring-boot-split-yml]
-
-==== test
-
-. link:/leaning/java/test/Junit-exception-test[Junit-exception-test]
-
-. link:/leaning/java/test/junit-csv-source[junit-csv-source]
-
-=== javaScript
-
-==== jquery
-
-. link:/leaning/javaScript/jquery/ajax[ajax]
-
-==== lodash
-
-. link:/leaning/javaScript/lodash/muteable-operator[muteable-operator]
-
-==== ng2-file-upload
-
-. link:/leaning/javaScript/ng2-file-upload/use-log[use-log]
-
-==== rxjs
-
-. link:/leaning/javaScript/rxjs/observer[observer]
 
 === network
 
@@ -204,13 +70,165 @@
 
 . link:/leaning/nuget/publish-package[publish-package]
 
-=== objective-c
+=== program-language
 
-. link:/leaning/objective-c/syntax-basic[syntax-basic]
+==== CSharp
 
-=== python
+. link:/leaning/program-language/CSharp/enum[enum]
 
-. link:/leaning/python/virtual-env[virtual-env]
+==== MacOSApp
+
+. link:/leaning/program-language/MacOSApp/StoryBoard[StoryBoard]
+
+==== dotnet
+
+===== core
+
+. link:/leaning/program-language/dotnet/core/2[2]
+
+. link:/leaning/program-language/dotnet/core/cross-domain-request[cross-domain-request]
+
+. link:/leaning/program-language/dotnet/core/custom-exception-page[custom-exception-page]
+
+. link:/leaning/program-language/dotnet/core/di-in-console[di-in-console]
+
+. link:/leaning/program-language/dotnet/core/docker[docker]
+
+. link:/leaning/program-language/dotnet/core/eshop-on-container[eshop-on-container]
+
+. link:/leaning/program-language/dotnet/core/nlog[nlog]
+
+. link:/leaning/program-language/dotnet/core/public-not-found-view[public-not-found-view]
+
+. link:/leaning/program-language/dotnet/core/send-email[send-email]
+
+. link:/leaning/program-language/dotnet/core/wcf[wcf]
+
+. link:/leaning/program-language/dotnet/core/web-api[web-api]
+
+==== java
+
+===== JVM
+
+. link:/leaning/program-language/java/JVM/useful-command[useful-command]
+
+===== arch-unit
+
+. link:/leaning/program-language/java/arch-unit/arch-unit-custom-validate-rule[arch-unit-custom-validate-rule]
+
+. link:/leaning/program-language/java/arch-unit/sonar-fix-skills[sonar-fix-skills]
+
+===== basic
+
+. link:/leaning/program-language/java/basic/AbstractCollection[AbstractCollection]
+
+. link:/leaning/program-language/java/basic/actor[actor]
+
+. link:/leaning/program-language/java/basic/combineLists[combineLists]
+
+. link:/leaning/program-language/java/basic/functionalProgram[functionalProgram]
+
+. link:/leaning/program-language/java/basic/functionalProgram2[functionalProgram2]
+
+. link:/leaning/program-language/java/basic/future[future]
+
+. link:/leaning/program-language/java/basic/history[history]
+
+. link:/leaning/program-language/java/basic/keep-sort-query[keep-sort-query]
+
+. link:/leaning/program-language/java/basic/math[math]
+
+. link:/leaning/program-language/java/basic/transient[transient]
+
+===== concurrency
+
+====== basic
+
+. link:/leaning/program-language/java/concurrency/basic/thread-process[thread-process]
+
+. link:/leaning/program-language/java/concurrency/basic/多线程并发编程[多线程并发编程]
+
+====== route-map
+
+. link:/leaning/program-language/java/concurrency/route-map/route-map[route-map]
+
+===== gradle
+
+. link:/leaning/program-language/java/gradle/history[history]
+
+===== maven
+
+. link:/leaning/program-language/java/maven/git-hooks[git-hooks]
+
+. link:/leaning/program-language/java/maven/maven-lifecycle[maven-lifecycle]
+
+===== mybatis
+
+. link:/leaning/program-language/java/mybatis/Example[Example]
+
+===== reactive-streaming
+
+. link:/leaning/program-language/java/reactive-streaming/flux[flux]
+
+. link:/leaning/program-language/java/reactive-streaming/zip[zip]
+
+===== spring
+
+. link:/leaning/program-language/java/spring/first-step[first-step]
+
+====== history
+
+. link:/leaning/program-language/java/spring/history/2[2]
+
+. link:/leaning/program-language/java/spring/history/history[history]
+
+====== jpa
+
+. link:/leaning/program-language/java/spring/jpa/2[2]
+
+. link:/leaning/program-language/java/spring/jpa/enum[enum]
+
+. link:/leaning/program-language/java/spring/spring-boot-split-yml[spring-boot-split-yml]
+
+===== test
+
+. link:/leaning/program-language/java/test/Junit-exception-test[Junit-exception-test]
+
+. link:/leaning/program-language/java/test/junit-csv-source[junit-csv-source]
+
+==== javaScript
+
+===== jquery
+
+. link:/leaning/program-language/javaScript/jquery/ajax[ajax]
+
+===== lodash
+
+. link:/leaning/program-language/javaScript/lodash/muteable-operator[muteable-operator]
+
+===== ng2-file-upload
+
+. link:/leaning/program-language/javaScript/ng2-file-upload/use-log[use-log]
+
+===== rxjs
+
+. link:/leaning/program-language/javaScript/rxjs/observer[observer]
+
+==== objective-c
+
+. link:/leaning/program-language/objective-c/syntax-basic[syntax-basic]
+
+==== python
+
+. link:/leaning/program-language/python/virtual-env[virtual-env]
+
+==== rust
+
+. link:/leaning/program-language/rust/how-to-setup-dev-env[how-to-setup-dev-env]
+
+. link:/leaning/program-language/rust/how-to-test[how-to-test]
+
+. link:/leaning/program-language/rust/how-to-use-regex[how-to-use-regex]
 
 === transalte
 
@@ -220,13 +238,21 @@
 
 ==== MacOs
 
+. link:/leaning/tweak/MacOs/2[2]
+
 . link:/leaning/tweak/MacOs/interface-inspector[interface-inspector]
 
+. link:/leaning/tweak/MacOs/2[2]
+
 . link:/leaning/tweak/MacOs/lldb-debug-command[lldb-debug-command]
+
+. link:/leaning/tweak/MacOs/2[2]
 
 . link:/leaning/tweak/MacOs/tools[tools]
 
 === ubuntu
+
+. link:/leaning/ubuntu/2[2]
 
 . link:/leaning/ubuntu/set-up[set-up]
 
