@@ -1,0 +1,7 @@
+= 在mac os 上touch bar 在vscode一直显示f1-f12.
+
+需求： 在其他app上显示正常的touch bar的quick access, 在vs code 上显示f1 - f12
+
+
+link:https://www.abheist.com/vscode-function-keys/[vscode-function-keys]
+
