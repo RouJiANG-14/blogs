@@ -330,6 +330,8 @@
 
 . link:/random/tooler[tooler]
 
+. link:/random/vscode-alway-shwo-fn-on-mac-with-touch-bar[vscode-alway-shwo-fn-on-mac-with-touch-bar]
+
 . link:/random/you-are-not-alone[you-are-not-alone]
 
 == summary
