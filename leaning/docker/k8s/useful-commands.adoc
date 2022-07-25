@@ -1,0 +1,25 @@
+= k8s 常用命令备份
+
+* Scaling k8s daemonset down to zero
+
+```
+kubectl -n kube-system patch daemonset myDaemonset -p '{"spec": {"template": {"spec": {"nodeSelector": {"non-existing": "true"}}}}}'
+```
+
+* Scaling up k8s daemonset
+
+```
+kubectl -n kube-system patch daemonset myDaemonset --type json -p='[{"op": "remove", "path": "/spec/template/spec/nodeSelector/non-existing"}]'
+```
+
+* Scaling all pods count to zero
+
+```
+ kubectl scale daemonset --replicas=0 --all -n efk-logging
+```
+
+* restart delpoyments 
+
+```bash
+ kubectl rollout restart deployments -n database replicates=1
+```
