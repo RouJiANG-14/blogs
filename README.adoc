@@ -42,6 +42,8 @@
 
 . link:/leaning/docker/k8s/questions[questions]
 
+. link:/leaning/docker/k8s/useful-commands[useful-commands]
+
 . link:/leaning/docker/mysql[mysql]
 
 . link:/leaning/docker/quick-remove-mutiple-images[quick-remove-mutiple-images]
