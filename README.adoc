@@ -36,9 +36,9 @@
 
 ==== k8s
 
-. link:/leaning/docker/k8s/2[2]
-
 . link:/leaning/docker/k8s/basic[basic]
+
+. link:/leaning/docker/k8s/basic2[basic2]
 
 . link:/leaning/docker/k8s/questions[questions]
 
