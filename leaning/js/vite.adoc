@@ -1,0 +1,7 @@
+:toc: right
+= vite 小记
+
+== 命令
+
+`vite` 命令等于 `vite serve --mode development`
+
