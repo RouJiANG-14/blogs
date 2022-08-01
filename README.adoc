@@ -58,6 +58,10 @@
 
 . link:/leaning/gitlab/ci-java[ci-java]
 
+=== js
+
+. link:/leaning/js/vite[vite]
+
 === network
 
 . link:/leaning/network/Intranet[Intranet]
