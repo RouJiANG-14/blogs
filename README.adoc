@@ -58,10 +58,6 @@
 
 . link:/leaning/gitlab/ci-java[ci-java]
 
-=== js
-
-. link:/leaning/js/vite[vite]
-
 === network
 
 . link:/leaning/network/Intranet[Intranet]
@@ -127,6 +123,8 @@
 ===== basic
 
 . link:/leaning/program-language/java/basic/AbstractCollection[AbstractCollection]
+
+. link:/leaning/program-language/java/basic/Java平台的理解[Java平台的理解]
 
 . link:/leaning/program-language/java/basic/actor[actor]
 
@@ -249,6 +247,14 @@
 . link:/leaning/program-language/javaScript/rxjs/2[2]
 
 . link:/leaning/program-language/javaScript/rxjs/observer[observer]
+
+==== js
+
+. link:/leaning/program-language/js/vite[vite]
+
+===== vue
+
+. link:/leaning/program-language/js/vue/nextTrick[nextTrick]
 
 ==== objective-c
 
