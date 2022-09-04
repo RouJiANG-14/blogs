@@ -124,11 +124,15 @@
 
 . link:/leaning/program-language/java/basic/AbstractCollection[AbstractCollection]
 
+. link:/leaning/program-language/java/basic/Exception和Error的区别[Exception和Error的区别]
+
 . link:/leaning/program-language/java/basic/Java平台的理解[Java平台的理解]
 
 . link:/leaning/program-language/java/basic/actor[actor]
 
 . link:/leaning/program-language/java/basic/combineLists[combineLists]
+
+. link:/leaning/program-language/java/basic/final-finalize-finally-difference[final-finalize-finally-difference]
 
 . link:/leaning/program-language/java/basic/functionalProgram[functionalProgram]
 
@@ -315,6 +319,8 @@
 . link:/life/router/route[route]
 
 == random
+
+. link:/random/Inception[Inception]
 
 . link:/random/bad-code[bad-code]
 
