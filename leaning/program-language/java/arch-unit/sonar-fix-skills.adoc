@@ -8,7 +8,7 @@
 [example]
 你昨天交的代码 sonar扫描出了一个新的issue，麻烦修一下
 
-service-bff 当时需要我们team维护。我也修了好多个issue。
+bff 当时需要我们team维护。我也修了好多个issue。
 
 === sonar报的问题
 
@@ -19,12 +19,12 @@ TODO: 这里缺少张图片。
 === 技巧
 快速修复的技巧是没有的，只有自己一行一行改代码。
 
-todo： 这里缺少图片（别走）
+todo： 这里缺少图片
 
 但是，让这个问题再也不出现的技巧是有的
 [source,java]
 ----
-@AnalyzeClasses(packages = "com.daimler.otras.controller") //<1>
+@AnalyzeClasses(packages = "com.xxx.xxx.controller") //<1>
 public class ControllerTest {
     @ArchTest
     private final ArchRule method_in_controller_should_be_public = // <2>
@@ -52,7 +52,7 @@ public class ControllerTest {
 public class ControllerTest {
     @Test
     void method_in_controller_should_be_public() {
-        JavaClasses importedClasses = new ClassFileImporter().importPackages("com.daimler.otras.controller"); // <1>
+        JavaClasses importedClasses = new ClassFileImporter().importPackages("com.xxx.xxx.controller"); // <1>
         final ArchRule rule = methods().that() // <2>
                 .areAnnotatedWith(GetMapping.class)
                 .or()
@@ -79,7 +79,7 @@ https://github.com/TNG/ArchUnit-Examples[官方的github demo]
 === 建议
 后边大家修sonar一些common和简单的问题，尝试写一个arch unit，去让sonar再也扫不出来这个问题。
 
-提升OTR的代码质量，需要大家出一份力。⛽️
+提升项目的代码质量，需要大家出一份力。⛽️
 
 === 题外话：其他语言版本
 https://archunitnet.readthedocs.io/en/latest/guide/[ArchUnit 官方.net版]

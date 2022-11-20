@@ -6,6 +6,7 @@
 
 ----
 REPOSITORY                                                     TAG       IMAGE ID       CREATED       SIZE
+application-tablet_tablet-android                          latest    2eb35f0c31ba   11 days ago   101MB
 tablet                                                         1.0       911d9196029d   11 days ago   5.94GB
 android-box-old                                                1.4       acf155cb71e9   11 days ago   4.2GB
 registry.cn-hangzhou.aliyuncs.com/xiaoquisme/android-box-new   1.3       acf155cb71e9   11 days ago   4.2GB
