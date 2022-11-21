@@ -152,6 +152,8 @@
 
 ====== basic
 
+. link:/leaning/program-language/java/concurrency/basic/FAQ[FAQ]
+
 . link:/leaning/program-language/java/concurrency/basic/thread-process[thread-process]
 
 . link:/leaning/program-language/java/concurrency/basic/多线程并发编程[多线程并发编程]
