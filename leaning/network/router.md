@@ -40,6 +40,7 @@
 >  sed -i 's/\tdetect_package/\t# detect_package/g' /koolshare/scripts/ks_tar_install.sh
 
 demo: 
+  
 ```
 ssh admin@192.168.2.1
 The authenticity of host '192.168.2.1 (192.168.2.1)' can't be established.
